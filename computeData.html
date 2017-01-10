@@ -1,0 +1,55 @@
+<html>
+<heade>
+    <title>Teste6</title>
+</heade>
+<body>
+    <div id="root">
+
+        <h1>All Tasks</h1>
+
+        <ul>
+            <li v-for="task in tasks" v-text="task.description"></li>
+        </ul>
+        
+        <h2>Completed Tasks</h2>
+
+        <ul>
+            <li v-for="task in completedTasks" v-text="task.description"></li>
+        </ul>
+
+    </div>
+
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+         new Vue({
+
+            el: '#root',
+
+            data: {
+
+                tasks: [
+                    { description: 'Go to the store', completed: false },
+                    { description: 'finish screen cast', completed: true },
+                    { description: 'learn no javascript', completed: true },
+                    { description: 'Give more atention for may mother', completed: false },
+                    { description: 'be happy', completed: false },
+                    { description: 'lost more weight', completed: false },
+                ]
+            },
+
+            computed:{
+                
+                completedTasks(){
+                    return this.tasks.filter( task => task.completed);
+                }
+
+            },
+
+            methods: {
+                
+            }
+        })
+    </script>
+</body>
+</html>

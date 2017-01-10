@@ -1,0 +1,25 @@
+<html>
+
+<head>
+    <title>Teste9 - Components</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.min.css">
+    <style type="text/css">
+        body {
+            padding-top: 40px
+        }
+    </style>
+    </style>
+</head>
+
+</html>
+
+<body>
+    <div id="root" class="container">
+        
+        <modal v-if="showModal" @close="showModal = false" body="Mollit in dolore magna nostrud velit."></modal>
+
+        <button @click="showModal = true">show Modal</button>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="component3.js"></script>
+</body>

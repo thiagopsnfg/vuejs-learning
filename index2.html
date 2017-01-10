@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <title></title>
+
+    <style type="text/css">
+        .is-loading { background:red; };   
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        
+        <h1 :class="{ 'is-loading' : isLoading }">Hello Word</h1>
+         
+         <br>
+         
+         <image :src="img"></image>
+         
+         <br>
+                  
+         <button :title="title" @click="changeImg">Change Image</button>
+
+    
+    </div>
+    
+    
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script>
+       new Vue({
+
+            el: '#root',
+
+            data: {
+
+                title: 'Now the title is being  set through  javascript.',
+
+                isLoading: false,
+
+                img: 'http://static1.purebreak.com.br/articles/0/53/40/@/29470-uheuheuehueheuhe-624x0-1.jpg ',
+
+                source:[
+                    'http://www.piadas.com.br/sites/default/files/styles/large/public/img_4073.jpg?itok=xWXM5nyf',
+                    'https://static.frasesparaface.com.br/imagem/o/d/odeio-quem-fala-to-chegando-quando-ainda-nem.jpg',           
+                    'http://static1.purebreak.com.br/articles/0/53/40/@/29469-so-lembrei-624x0-1.jpg',
+                    'https://3.bp.blogspot.com/-MgXO0ndVf08/Vjqy4XShwhI/AAAAAAAARok/uFEBUe_gq7g/s1600/imagens-engracadas-para-facebook-06.jpg',
+                    'https://2.bp.blogspot.com/-1B5LUbTke4s/U_-a9zX47mI/AAAAAAAA2Tc/NINbR9O263o/s1600/imagens-engra%C3%A7adas%2B(118).jpg'
+                ]
+            },
+
+            methods: {
+                changeImg(){
+                    this.img = this.source[Math.floor(Math.random() * this.source.length)]; 
+                    this.isLoading = true;
+                }
+            }
+
+        })
+    </script>
+</body>
+
+</html>
