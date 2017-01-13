@@ -3,45 +3,29 @@
 
 <body>
     <div id="root">
-
         <ul>
             <li v-for="name in names" v-text="name"></li>
         </ul>
-
         <input id="input" type="text" v-model="name">
-
         <button @click="addName">Add some text</button>
-
-    </div> 
-
+    </div>
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script>
         var app = new Vue({
 
             el: '#root',
-
             data: {
-
                 name: '',
-
                 names: ['jane', 'jone', 'jake', 'jude']
-
             },
 
             methods: {
-
                 addName() {
-
                     if (this.name) {
-
                         this.names.push(this.name);
-
                         this.name = '';
-
                     }
-
                 }
-
             },
         })
     </script>

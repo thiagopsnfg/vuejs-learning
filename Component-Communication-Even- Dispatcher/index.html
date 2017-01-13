@@ -1,0 +1,19 @@
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.3.0/css/bulma.min.css">
+</head>
+
+<body>
+    <div id="root" class="container">
+        <coupon @applied="onCouponApplied"></coupon>
+
+        <h1 v-if="applied">You has used your cupom!!!!!!</h1>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

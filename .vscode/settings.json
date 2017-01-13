@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
     "editor.fontSize": 14,
-     "files.autoSave": "on",
-     "editor.lineHeight": 25
+    "files.autoSave": "on",
+    "editor.lineHeight": 22
 }
